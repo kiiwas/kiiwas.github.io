@@ -7,7 +7,7 @@
 }
 
 html {
-  cursor: url('/images/cursor.jpg'), auto;
+  cursor: url('cursor.jpg'), auto;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -23,7 +23,7 @@ html {
 }
 html {
   font-family: monospace;
-  cursor: url('/images/cursor.jpg'), auto;
+  cursor: url('cursor.jpg'), auto;
 }
 .socials {
     display: flex;
@@ -90,7 +90,7 @@ html {
 }
 body {
   background: rgb(17, 17, 17);
-  cursor: url('/images/cursor.jpg'), auto;
+  cursor: url('cursor.jpg'), auto;
 }
 .back {
   width: 100%;
