@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Adresi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #424242; /* Gri tonlarında arkaplan */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .card {
+            max-width: 500px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgb(76, 65, 95); /* Şeffaf kart arka planı */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        .ethereum-address {
+            margin-top: 20px; /* Ethereum adresi bölgesinin üst boşluğu */
+            margin-bottom: 20px; /* Ethereum adresi bölgesinin alt boşluğu */
+            font-size: 20px;
+            color: #ffffff;
+            padding: 15px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            background-color: #424242;
+            user-select: none; /* Adresin seçilemez olmasını sağlar */
+        }
+        .ethereum-address button {
+            display: block;
+            margin: 20px auto 0; /* Butonun ortalanması */
+            padding: 15px 40px; /* Butonun padding değerleri */
+            font-size: 20px; /* Butonun font boyutu */
+            border: 2px solid #3f3e3e; /* Butonun kenarlık rengi */
+            border-radius: 5px;
+            background-color: transparent; /* Butonun arkaplan rengi */
+            color: #3f3e3e;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .ethereum-address button:hover {
+            background-color: #3f3e3e; /* Butonun arkaplan rengi hover durumunda */
+            color: #fff; /* Buton metin rengi hover durumunda */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Ethereum Adresi</h1>
+            <div class="ethereum-address" id="ethereum-address">0x33ef0B0766B55516194E6f247162e0AB383bc789</div>
+            <button onclick="copyToClipboard()">Adresi Kopyala</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("ethereum-address");
+            var textarea = document.createElement("textarea");
+            textarea.value = copyText.textContent;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            alert("Ethereum adresi kopyalandı: " + copyText.textContent);
+        }
+    </script>
+</body>
+</html>
